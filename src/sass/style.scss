@@ -1,0 +1,53 @@
+// // import libraries
+
+// // import base styles
+// @import url('./base/_func.scss');
+// @import url('./base/_mixins.scss');
+// @import url('./base/_variables.scss');
+
+// // import static components
+// @import url('./components/_header.scss');
+// @import url('./components/_footer.scss');
+
+// // import dynamic components
+
+// // import pages
+// @import url('./pages/page_about.css');
+@mixin btn($color: rgb(34, 34, 73), $padding: 10px, $borderradius: 5px, $background-color: "#f00", $width: 50px) {
+    background-color: $background-color;
+    color: $color;
+    padding: $padding;
+    border: none;
+    border-radius: $borderradius;
+    cursor: pointer;
+    width: $width;
+}
+
+.products {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    justify-content: center;
+    align-items: center;
+
+    &__card {
+      
+        &_btn {
+            @include btn($color: red);
+        }
+
+        background-color: red;
+        margin-right: 10px;
+    }
+
+    &__card1{
+        &_btn{
+            @include btn($width:100px);
+        }
+    }
+
+    &_price {
+        color: greenyellow !important;
+    }
+
+}
