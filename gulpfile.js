@@ -20,13 +20,13 @@ gulp.task('server', function() {
 });
 
 
-// gulp.task('fileinclude', function() {
-//     gulp.src(['src/**/*.html'])
-//         .pipe(fileinclude({
-//             prefix: '@@'
-//         }))
-//         .pipe(gulp.dest('dist/'));
-// });
+gulp.task('fileinclude', function() {
+    gulp.src(['src/**/*.html'])
+        .pipe(fileinclude({
+            prefix: '@@'
+        }))
+        .pipe(gulp.dest('dist/'));
+});
 
 gulp.task('styles', function() {
     return gulp.src("src/**/**/*.+(scss|sass)")
