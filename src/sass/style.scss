@@ -5,9 +5,10 @@
 // @import url('./base/_mixins.scss');
 // @import url('./base/_variables.scss');
 
-// // import static components
-// @import url('./components/_header.scss');
-// @import url('./components/_footer.scss');
+// import static components
+@import url('components/_general.scss');
+@import url('components/_header.scss');
+@import url('components/_footer.scss');
 
 // // import dynamic components
 
